@@ -27,7 +27,7 @@ if [[ ${SKIP_MAPNIK_INSTALL:-} != 'YES' ]] && [[ ! -f ./mason_packages/.link/bin
 
     # mapnik deps
     install jpeg_turbo 1.5.2
-    install libpng 1.6.32
+    install libpng 1.6.39
     install libtiff 4.0.8
     install icu ${ICU_VERSION}-brkitr
     install proj 7.2.1 libproj
