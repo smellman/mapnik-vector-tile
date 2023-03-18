@@ -13,7 +13,11 @@
 #include <fstream>
 
 // mapnik
+#if MAPNIK_VERSION >= 400000
 #include <mapnik/geometry/box2d.hpp>
+#else
+#include <mapnik/box2d.hpp>
+#endif
 #include <mapnik/datasource_cache.hpp>
 #include <mapnik/global.hpp>
 #include <mapnik/well_known_srs.hpp>

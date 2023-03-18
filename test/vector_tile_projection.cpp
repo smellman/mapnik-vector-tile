@@ -1,7 +1,11 @@
 #include "catch.hpp"
 
 #include <mapnik/projection.hpp>
+#if MAPNIK_VERSION >= 400000
 #include <mapnik/geometry/box2d.hpp>
+#else
+#include <mapnik/box2d.hpp>
+#endif
 #include <mapnik/well_known_srs.hpp>
 #include <mapnik/proj_transform.hpp>
 #include "vector_tile_projection.hpp"

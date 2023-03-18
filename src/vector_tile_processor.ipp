@@ -8,7 +8,11 @@
 #include "vector_tile_layer.hpp"
 
 // mapnik
+#if MAPNIK_VERSION >= 400000
 #include <mapnik/geometry/box2d.hpp>
+#else
+#include <mapnik/box2d.hpp>
+#endif
 #include <mapnik/datasource.hpp>
 #include <mapnik/feature.hpp>
 #include <mapnik/image_scaling.hpp>

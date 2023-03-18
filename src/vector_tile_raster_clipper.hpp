@@ -5,7 +5,11 @@
 #include "vector_tile_config.hpp"
 
 // mapnik
+#if MAPNIK_VERSION >= 400000
 #include <mapnik/geometry/box2d.hpp>
+#else
+#include <mapnik/box2d.hpp>
+#endif
 #include <mapnik/image_scaling.hpp>
 #include <mapnik/proj_transform.hpp>
 #include <mapnik/raster.hpp>

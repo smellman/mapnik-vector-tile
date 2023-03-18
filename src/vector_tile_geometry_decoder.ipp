@@ -2,7 +2,11 @@
 #include <protozero/pbf_reader.hpp>
 
 //mapnik
+#if MAPNIK_VERSION >= 400000
 #include <mapnik/geometry/box2d.hpp>
+#else
+#include <mapnik/box2d.hpp>
+#endif
 #include <mapnik/geometry.hpp>
 #if defined(DEBUG)
 #include <mapnik/debug.hpp>
